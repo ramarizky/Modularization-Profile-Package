@@ -8,9 +8,10 @@
 import SwiftUI
 
 public struct ProfileView: View {
-    var image = UserDefaults.standard.string(forKey: "PROFILE_IMAGE") ?? ""
-    var name = UserDefaults.standard.string(forKey: "PROFILE_NAME") ?? ""
-    var job = UserDefaults.standard.string(forKey: "PROFILE_JOB") ?? ""
+    public init() {}
+    public var image = UserDefaults.standard.string(forKey: "PROFILE_IMAGE") ?? ""
+    public var name = UserDefaults.standard.string(forKey: "PROFILE_NAME") ?? ""
+    public var job = UserDefaults.standard.string(forKey: "PROFILE_JOB") ?? ""
     public var body: some View {
         ZStack {
             Color.gray
@@ -27,11 +28,5 @@ public struct ProfileView: View {
                     .font(.headline)
             }
         }
-    }
-}
-
-struct ProfileView_Previews: PreviewProvider {
-    static var previews: some View {
-        ProfileView()
     }
 }
